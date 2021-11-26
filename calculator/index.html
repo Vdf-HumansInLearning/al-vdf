@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h3>SPLI</h3>
+        <h3>TTER</h3>
+    </header>
+    <main class="main">
+        <div class="content__wrapper">
+            <div class="left__side">
+                <div class="first__input">
+                    <p>Bill</p>
+                    <input name="BillTextbox" maxlength="7" placeholder="0" type="text" class="textbox">
+                    <span>$</span>
+                </div>
+                <div class="second__input">
+                    <p>Select Tip %</p>
+                    <div class="percent__input">
+                        <button>5%</button>
+                        <button>10%</button>
+                        <button>15%</button>
+                        <button>25%</button>
+                        <button>50%</button>
+                        <button id="custom__btn">Custom</button>
+                    </div>
+                </div>
+                <div class="third__input">
+                    <div>
+                        <p>Number of People</p>
+                    </div>
+                    <div class="last__input">
+
+                        <i class="fa-solid fa-user"></i><input name="NOPtextbox" maxlength="5" placeholder="0"
+                            type="text" class="textbox">
+                    </div>
+
+                </div>
+            </div>
+            <div class="right__side">
+                <div class="result">
+                    <div class="tip">
+                        <p class="amount">Tip Amount</p>
+                        <p class="person">/ person</p>
+                    </div>
+                    <div>
+                        <p class="result__number"><span class="smalldollar">$</span>0.00</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="tip">
+                        <p class="amount">Total</p>
+                        <p class="person">/ person</p>
+                    </div>
+                    <div>
+                        <p class="result__number"><span class="smalldollar">$</span>0.00</p>
+                    </div>
+                </div>
+                <button class="btn__reset">RESET</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

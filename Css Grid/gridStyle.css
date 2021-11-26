@@ -1,0 +1,12 @@
+img {
+    width: 300px;
+    height: 300px;
+    padding: 5px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px auto;
+}

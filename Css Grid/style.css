@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+}
+
+body {
+    background: url('https://raw.githubusercontent.com/WebToLearn/personal-page-css-workshop/master/img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5em;
+    margin: 0 0 1.5em 0;
+}
+
+.page-grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 990px 1fr;
+    grid-template-areas:
+        ". container ."
+        ". footer .";
+}
+
+.container {
+    grid-area: container;
+    background: white;
+    padding: 30px 20px;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 6px #c0392b;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.footer {
+    grid-area: footer;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    background: white;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0px 4px #ccc;
+    border-radius: 4px;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.menu {
+    width: 990px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+
+.menu--light {
+    margin: 30px auto 0 auto;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    padding: 10px 40px 10px 40px;
+    background: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    color: #888;
+    vertical-align: bottom;
+}
+
+.menu-item:hover {
+    position: relative;
+    bottom: -1px;
+    color: #F3764E;
+    padding: 15px 40px 15px 40px;
+    margin-top: 0;
+}
+
+.title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 1.5em;
+    line-height: 1em;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+.header {
+    margin-top: 30px;
+}
+
+hr {
+    margin: 25px 0;
+    border: 1px solid #f1f1f1;
+}
+
+.info__aside {
+    display: grid;
+    grid-template-columns: 640px 300px ;
+}
+
+ul li {
+    padding-top:15px ;
+    padding-bottom: 15px;
+    margin-left: -20px;
+    list-style: none;
+    color: #F3764E;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 14px;
+    font-family: 'Open Sans';
+    display:grid;
+    grid-template-rows: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h2{
+    margin:0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h3{
+    margin-top: 10px;
+    color: #999;
+    font-size: 1.5em;
+}
+
+.info__description{
+    margin-left: 22px;
+}
+
+.aside {
+    border-left: 1px solid #e7e7e7;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 200px 400px;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.social__item {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px 10px;
+}
+
+.social__arrange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.social__email {
+    text-decoration: none;
+    color:#F3764E;
+    font-weight: bold;
+}
+
+.social__name {
+    font-size: 12px;
+    
+    color:#9fa1a1 ;
+}
+
+@media (max-width: 990px) {
+    .menu {
+        width: 100%;
+    }
+    .page-grid {
+        display: block;
+    }
+    .footer {
+        border-radius: 0;
+    }
+    .info__aside{
+        display: block;
+        text-align: center;
+    }
+    .info{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .social {
+        display: block;
+    }
+    .social__item {
+        justify-content: center;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .social__arrange{
+        width: 155px;
+        text-align: center;
+    }
+
+    .aside {
+        border-left: none;
+    }
+    .menu-item:hover{
+        margin-right: 10px;
+        margin-top: 20px;
+        padding: 10px 40px 10px 40px;
+        bottom: 0;
+        transform: scale(1.1);
+    }
+
+    .menu-item{
+        border-bottom: 1px solid #e7e7e7;
+    }
+    .menu--light{
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: none;
+    }
+    .header {
+        display: none;
+    }
+    .footer {
+        margin-top: 3px;
+    }
+    .aside{
+        display: none;
+    }
+
+    a{
+        width: 100%;
+    }
+}
+
+@media print  {
+    .aside {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+}

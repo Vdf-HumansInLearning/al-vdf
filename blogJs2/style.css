@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #1e1e1e;
+  font-size: 11px;
+}
+
+.nav__item {
+  margin-left: 100px;
+}
+
+.add__container {
+  margin-top: 130px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  font-size: 14px;
+  border: 1px solid #9b9b9b;
+  width: 300px;
+  height: 60px;
+  border-radius: 50px;
+  color: #1e1e1e;
+  font-family: "Montserrat";
+  line-height: 1.3;
+  background: none;
+  cursor: pointer;
+}
+
+.title {
+  width: 800px;
+  text-align: center;
+  font-size: 46px;
+  margin: 0 auto;
+  color: #1e1e1e;
+  margin-top: 90px;
+  line-height: 1.2;
+}
+
+.info__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.info__item {
+  margin: 0 20px;
+  font-size: 14px;
+  color: #9b9b9b;
+  line-height: 1.3;
+}
+
+.info__mark {
+  color: #1e1e1e;
+  font-weight: 700;
+}
+
+.actions__container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions__btn {
+  border: none;
+  font-size: 14px;
+  background: none;
+  line-height: 1.3;
+  color: #1e1e1e;
+  font-family: "Montserrat";
+  padding: 5px;
+  cursor: pointer;
+}
+
+.edit {
+  border-right: 1px solid #1e1e1e;
+  height: 25px;
+}
+
+.content__container {
+  margin-top: 80px;
+  width: 70%;
+  margin: 80px auto 0 auto;
+}
+
+p {
+  margin-bottom: 30px;
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 1.9;
+  font-family: "Cardo";
+  display: flex;
+  justify-content: space-around;
+}
+
+.readmore__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 35px 0 100px 0;
+}
+
+.footer__link {
+  color: #1e1e1e;
+  font-family: "Montserrat";
+  font-size: 34px;
+  background: none;
+  line-height: 1.2;
+  border: none;
+  cursor: pointer;
+}
+
+.modal__overlay {
+  display: none;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 8%;
+  left: 50%;
+  z-index: 1;
+  background-color: white;
+}
+
+.modal {
+  width: 1000px;
+  height: 750px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  box-shadow: 0 0 26px 6px;
+}
+
+.inputs__container {
+  display: flex;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.input {
+  width: 400px;
+  height: 35px;
+  margin-bottom: 25px;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-family: "Cardo";
+}
+
+.textarea {
+  display: flex;
+  height: 280px;
+  width: 850px;
+  margin: 0 auto;
+  border: 1px solid #9b9b9b;
+  border-radius: 5px;
+  color: #9b9b9b;
+  font-family: "Cardo";
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.modal__buttons {
+  margin-top: 25px;
+  margin-left: 75px;
+  margin-right: 75px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleB {
+  margin: 0 auto;
+  padding-top: 50px;
+  justify-content: center;
+  line-height: 1.2;
+  font-family: "Montserrat";
+  font-size: 46px;
+
+  text-align: center;
+  width: 800px;
+}
+
+.button__close {
+  float: right;
+  background: none;
+  border: 1px solid #1e1e1e;
+  border-radius: 50%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.button--pink:hover,
+.close__modal:hover {
+  background-color: #ffe3e3;
+}
+
+.button__close:hover {
+  background-color: rgb(243, 158, 215);
+  transform: scale(1.15);
+}
+
+.read__more {
+  padding: 105px;
+  margin: 75px;
+  background-color: #ffe3e3;
+  width: 100%;
+  color: #000;
+  font-family: "Montserrat-Italic";
+  font-style: italic;
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.readmore__text {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.light-theme {
+  color: black;
+  /* transition: 1s; */
+  background-color: white;
+}
+.dark-theme {
+  color: white;
+  /* transition: 1s; */
+  background-color: black;
+}
+
+.theme {
+  position: relative;
+}
+
+#toggle__on {
+  top: 10px;
+  cursor: pointer;
+
+  right: -90%;
+  position: relative;
+}
+#toggle__off {
+  top: 10px;
+  cursor: pointer;
+
+  right: -90%;
+  position: relative;
+}
+.white__nav {
+  color: white;
+}
