@@ -224,11 +224,9 @@ function createArticle(article) {
 //
 
 //---------footer
-
 let footer = document.createElement("footer");
 footer.setAttribute("class", "footer");
 container.appendChild(footer);
-
 let previousButton = document.createElement("button");
 previousButton.setAttribute("class", "footer__link");
 previousButton.setAttribute("type", "button");
@@ -333,7 +331,7 @@ function hideModal() {
 // createTheme();
 document.getElementById("toggle__off").style.display = "none";
 let b = localStorage.getItem("theme");
-//console.log(b);
+
 function switchTheme() {
   if (body.classList.contains("dark-theme")) {
     body.classList.remove("dark-theme");
@@ -439,56 +437,50 @@ class IndexView {
       createArticle(article);
       createModal();
       showReadMoreText();
+      let myId = uri.slice(9);
+      console.log(myId);
+      let nextBtn = document.getElementsByClassName("footer__link--next")[0];
+      nextBtn.addEventListener("click", () => {
+        window.location.href = `/#article${0}`;
+      });
     } else if (contentUri.startsWith("article")) {
       let myId = uri.slice(7);
-      console.log(myId);
+      //console.log(myId);
       let foundArticle = article.find((item) => item.id == myId);
-      console.log(foundArticle);
+      //  console.log(foundArticle);
       if (foundArticle) {
         let articleToRender = [];
         articleToRender.push(foundArticle);
-        console.log(articleToRender);
+        //console.log(articleToRender);
         createArticle(articleToRender);
         showReadMoreText();
       }
-    }
+      let previousBtn = document.getElementsByClassName("footer__link")[0];
+      previousBtn.addEventListener("click", () => {
+        if (myId < 1) {
+          console.log(window.location.href);
+          window.location.href = `#index.html`;
+        } else {
+          window.location.href = `/#article${myId - 1}`;
+        }
+      });
 
+      let nextBtn = document.getElementsByClassName("footer__link--next")[0];
+      nextBtn.addEventListener("click", () => {
+        if (myId >= article.length - 1) {
+          window.location.href = `#index.html`;
+        } else {
+          window.location.href = `/#article${parseInt(myId) + 1}`;
+        }
+      });
+    }
     // console.log(elementToRemove);
     function cleanup(parent) {
       //parent.removeChild(parent.firstChild);
       parent.querySelectorAll("*").forEach((n) => n.remove());
     }
-
-    // for (let j = 0; j < article.length; j++) {
-    //   if (containerArticle.hasChildNodes()) {
-    //     cleanup(containerArticle);
-    //   } else if (contentUri === `article${j}`) {
-    //     let articleToRender = [];
-    //     articleToRender.push(article[j]);
-    //     // if (articleToRender.length > 1) {
-    //     //   articleToRender.shift();
-    //     // }
-    //     createArticle(articleToRender);
-
-    //     console.log(articleToRender);
-
-    //     //showReadMoreText();
-    //   }
-    //   // let elementToRemove = containerArticle.getElementsByTagName("article");
-    // let b = [...elementToRemove];
-    // console.log(b);
-    //}
-    let c = containerArticle.hasChildNodes();
-    console.log(c);
-
-    // if (containerArticle.hasChildNodes()) {
-    //   console.log("clean");
-    //   cleanup(containerArticle);
-    // } else {
   }
 }
 new IndexView();
 
 //---- next button
-let nextBtn = document.getElementsByClassName("footer__link--next")[0];
-nextButton.addEventListener("click", () => {});
