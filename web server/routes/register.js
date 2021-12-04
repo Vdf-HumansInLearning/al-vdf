@@ -11,11 +11,12 @@ let users = JSON.parse(rawdata);
 router.post("/", function (req, res, next) {
   users.push({
     id: users[users.length - 1].id + 1,
-
+    name: "",
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    role: "user",
+    role: false,
+    loggedin: "",
     address: {
       street: "",
       suite: "",
