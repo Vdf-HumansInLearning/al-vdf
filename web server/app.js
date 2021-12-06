@@ -8,7 +8,8 @@ var logger = require("morgan");
 var usersRouter = require("./routes/users");
 var phonesRouter = require("./routes/phones");
 const loginRouter = require("./routes/login");
-
+///to do move login and register routes to single auth route
+// const auth//  /auth/login   auth/register
 const registerRouter = require("./routes/register");
 
 var app = express();
@@ -24,7 +25,6 @@ app.use("/phones", phonesRouter);
 app.use("/login", loginRouter);
 
 //app.use("/details", detailsRouter);
-
 app.use("/register", registerRouter);
 
 // catch 404 and forward to error handler

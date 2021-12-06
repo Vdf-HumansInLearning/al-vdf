@@ -5,7 +5,7 @@ const fs = require("fs");
 var router = express.Router();
 
 router.get("/", function (req, res, next) {
-  router.get("./user/:id", (req, res) => {
+  router.get("./users/:id", (req, res) => {
     res.send("welcome" + req.params.id);
   });
   console.log(req.params);
@@ -13,3 +13,16 @@ router.get("/", function (req, res, next) {
 });
 
 module.exports = router;
+
+// const { response } = require("express");
+// var express = require("express");
+// const fs = require("fs");
+// var router = express.Router();
+
+// /* GET users listing. */
+// router.get("/", function (req, res, next) {
+//   let users = JSON.parse(fs.readFileSync("./users.json", "utf8"));
+//   res.send(users);
+// });
+
+// module.exports = router;

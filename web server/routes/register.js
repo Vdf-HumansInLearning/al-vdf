@@ -1,4 +1,4 @@
-const axios = require("axios").default;
+//const axios = require("axios").default;
 const path = require("path");
 var express = require("express");
 const fs = require("fs");
@@ -8,15 +8,16 @@ let rawdata = fs.readFileSync(path.resolve(__dirname, "../users.json"));
 
 let users = JSON.parse(rawdata);
 
-router.post("/", function (req, res, next) {
+router.post("/", function (req, res) {
+  console.log(req.body);
   users.push({
     id: users[users.length - 1].id + 1,
     name: "",
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
-    role: false,
-    loggedin: "",
+    role: "user",
+    loggedin: false,
     address: {
       street: "",
       suite: "",
@@ -40,7 +41,7 @@ router.post("/", function (req, res, next) {
     if (err) {
       console.log(err);
     } else {
-      console.log("Write operation complete.");
+      console.log("Operation complete.");
     }
   });
   res.send("Successfully registered");
