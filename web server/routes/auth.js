@@ -1,14 +1,19 @@
-//const axios = require("axios").default;
-const path = require("path");
-var express = require("express");
+const express = require("express");
 const fs = require("fs");
-var router = express.Router();
+const router = express.Router();
 
-let rawdata = fs.readFileSync(path.resolve(__dirname, "../users.json"));
+router.post("/login", function (req, res, next) {
+  console.log(req.body);
+  let users = JSON.parse(fs.readFileSync("./users.json", "utf8"));
+  let user = users.find(
+    (user) =>
+      user.email === req.body.email && user.password === req.body.password
+  );
+  console.log(user);
+  res.json(user);
+});
 
-let users = JSON.parse(rawdata);
-
-router.post("/", function (req, res) {
+router.post("/register", function (req, res) {
   console.log(req.body);
   users.push({
     id: users[users.length - 1].id + 1,

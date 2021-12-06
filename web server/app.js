@@ -1,16 +1,12 @@
 var createError = require("http-errors");
 var express = require("express");
-const bodyparser = require("body-parser");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var usersRouter = require("./routes/users");
 var phonesRouter = require("./routes/phones");
-const loginRouter = require("./routes/login");
-///to do move login and register routes to single auth route
-// const auth//  /auth/login   auth/register
-const registerRouter = require("./routes/register");
+const authRouter = require("./routes/auth");
 
 var app = express();
 
@@ -22,10 +18,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/users", usersRouter);
 app.use("/phones", phonesRouter);
-app.use("/login", loginRouter);
-
-//app.use("/details", detailsRouter);
-app.use("/register", registerRouter);
+app.use("/auth", authRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
