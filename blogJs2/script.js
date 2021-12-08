@@ -95,6 +95,8 @@ function createArticle(article) {
     deleteButton.setAttribute("class", "actions__btn");
     deleteButton.setAttribute("type", "button");
     deleteButton.addEventListener("click", () => {
+      // document.getElementById(`article n${article[i].id}`).style.display =
+      "none";
       deleteArticle(article[i].id);
     });
     deleteButton.textContent = "Delete";
@@ -167,6 +169,7 @@ function deleteArticle(id) {
     .then((data) => {
       //  const b = "for second review";
       console.log("delete succes", data);
+      // cleanup();
       fetchData();
     })
     .catch((err) => {
@@ -273,13 +276,12 @@ function showModal() {
     let saying = document.getElementById("modal-inputs5").value;
     let contentInput = document.getElementsByClassName("textarea")[0].value;
 
-    fetch(`http://localhost:3001/article/4`, {
-      method: "put",
+    fetch(`http://localhost:3001/article`, {
+      method: "post",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: 4,
         title: title,
         subtitle: tag,
         author: author,
@@ -293,7 +295,8 @@ function showModal() {
       }),
     })
       .then(function (data) {
-        console.log("Response", data);
+        console.log("Request succes", data);
+
         hideModal();
       })
       .catch(function (error) {
@@ -417,7 +420,8 @@ function fetchData() {
   fetch("http://localhost:3001/article")
     .then((res) => res.json())
     .then((article) => {
-      //cleanup(containerArticle);
+      let containerArticle = document.getElementById("main");
+      cleanup(containerArticle);
       createNavbar(navbar);
       createAddArticleButton();
       createArticle(article);
@@ -451,7 +455,6 @@ class IndexView {
       fetch("http://localhost:3001/article")
         .then((res) => res.json())
         .then((article) => {
-          console.log(uri + "sssss");
           cleanup(containerArticle);
           createNavbar(navbar);
           createAddArticleButton();
