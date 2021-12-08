@@ -241,7 +241,6 @@ function deleteArticle(id) {
   })
     .then(json)
     .then((data) => {
-      const a = "check test";
       console.log("delete succes", data);
       window.location.hash = `#index.html`;
     })
