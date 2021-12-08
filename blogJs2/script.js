@@ -1,74 +1,81 @@
 const navbar = ["Travel updates", "Reviews", "About", "Contact"];
-const article = [
-  {
-    id: 0,
-    title: "The complete guide to explore Trasilvania, with your bike",
-    subtitle: "Destination Europe",
-    author: "Jonnathan Mercadina",
-    date: "July 01, 2018",
-    img: "img/bike.jpg",
-    imgAlt: "Bike",
-    content1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    content2:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    readMore1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosams adaddsfdfdggg  ",
-    readMore2:
-      "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
-  },
-  {
-    id: 1,
-    title: "Bucegi: Places you must visit before you die",
-    subtitle: "Must Visit",
-    author: "Jonnathan Mercadina",
-    date: "June 30, 2018",
-    img: "img/bucegi.jpg",
-    imgAlt: "Bucegi",
-    content1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    content2:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    readMore1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosams adaddsfdfdggg  ",
-    readMore2:
-      "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
-  },
-  {
-    id: 2,
-    title: "Romania: The land of dreams",
-    subtitle: "Village",
-    author: "Jonnathan Mercadina",
-    date: "June 17, 2018",
-    img: "img/village.jpg",
-    imgAlt: "Village",
-    content1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    content2:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    readMore1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam ",
-    readMore2:
-      "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
-  },
-  {
-    id: 3,
-    title: "Sarmale - stuffed cabbage rolls. Good or bad?",
-    subtitle: "Food",
-    author: "Jonnathan Mercadina",
-    date: "December 29, 2017",
-    img: "img/sarmale.jpg",
-    imgAlt: "Sarmale",
-    content1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    content2:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
-    readMore1:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam ",
-    readMore2:
-      "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
-  },
-];
+// const article = [
+//   {
+//     id: 0,
+//     title: "The complete guide to explore Trasilvania, with your bike",
+//     subtitle: "Destination Europe",
+//     author: "Jonnathan Mercadina",
+//     date: "July 01, 2018",
+//     img: "img/bike.jpg",
+//     imgAlt: "Bike",
+//     content1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     content2:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     readMore1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosams adaddsfdfdggg  ",
+//     readMore2:
+//       "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
+//   },
+//   {
+//     id: 1,
+//     title: "Bucegi: Places you must visit before you die",
+//     subtitle: "Must Visit",
+//     author: "Jonnathan Mercadina",
+//     date: "June 30, 2018",
+//     img: "img/bucegi.jpg",
+//     imgAlt: "Bucegi",
+//     content1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     content2:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     readMore1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosams adaddsfdfdggg  ",
+//     readMore2:
+//       "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
+//   },
+//   {
+//     id: 2,
+//     title: "Romania: The land of dreams",
+//     subtitle: "Village",
+//     author: "Jonnathan Mercadina",
+//     date: "June 17, 2018",
+//     img: "img/village.jpg",
+//     imgAlt: "Village",
+//     content1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     content2:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     readMore1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam ",
+//     readMore2:
+//       "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
+//   },
+//   {
+//     id: 3,
+//     title: "Sarmale - stuffed cabbage rolls. Good or bad?",
+//     subtitle: "Food",
+//     author: "Jonnathan Mercadina",
+//     date: "December 29, 2017",
+//     img: "img/sarmale.jpg",
+//     imgAlt: "Sarmale",
+//     content1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     content2:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque.",
+//     readMore1:
+//       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam ",
+//     readMore2:
+//       "Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem  Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est totam laboriosam debitis magnam voluptatum, incidunt neque. Totam ullam non quis, repellendus molestiae in itaque natus labore quos ipsum alias, veritatis nihil! Quisquam labore, sequi minima expedita necessitatibus omnis error amet recusandae atque commodi quia! Vel laborum recusandae voluptatum rerum id harum, fuga beatae ut, consequuntur repellendus ipsum temporibus libero itaque. adipisicing elit. Est totam laboriosam Lorem ",
+//   },
+// ];
+
+// const getArticle = () => {
+//   fetchData.then((article) => {
+//     return article;
+//   });
+// };
+// getArticle();
 
 let body = document.getElementById("body");
 
@@ -165,6 +172,9 @@ function createArticle(article) {
     let deleteButton = document.createElement("button");
     deleteButton.setAttribute("class", "actions__btn");
     deleteButton.setAttribute("type", "button");
+    deleteButton.addEventListener("click", () => {
+      deleteArticle(article[i].id);
+    });
     deleteButton.textContent = "Delete";
     divArticleButton.appendChild(deleteButton);
 
@@ -222,6 +232,23 @@ function createArticle(article) {
   }
 }
 //
+
+//-----delete article
+
+function deleteArticle(id) {
+  fetch("http://localhost:3001/article/" + id, {
+    method: "DELETE",
+  })
+    .then(json)
+    .then((data) => {
+      const a = "check test";
+      console.log("delete succes", data);
+      window.location.hash = `#index.html`;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
 //---------footer
 let footer = document.createElement("footer");
@@ -312,23 +339,23 @@ function hideModal() {
 }
 
 //-----create
-// function createTheme() {
-//   let div = document.createElement("div");
-//   div.setAttribute("class", "theme");
-//   body.appendChild(div);
-//   let darkIcon = document.createElement("i");
-//   darkIcon.setAttribute("class", "fas fa-toggle-on fa-2x");
-//   darkIcon.setAttribute("id", "toggle__on");
-//   darkIcon.setAttribute("onclick", "switchTheme()");
-//   div.appendChild(darkIcon);
-//   let whiteIcon = document.createElement("i");
-//   whiteIcon.setAttribute("class", "fas fa-toggle-off fa-2x");
-//   whiteIcon.setAttribute("id", "toggle__off");
-//   whiteIcon.setAttribute("onclick", "switchTheme()");
-//   whiteIcon.setAttribute("style", "display: none");
-//   div.appendChild(whiteIcon);
-// }
-// createTheme();
+function createTheme() {
+  let div = document.createElement("div");
+  div.setAttribute("class", "theme");
+  body.appendChild(div);
+  let darkIcon = document.createElement("i");
+  darkIcon.setAttribute("class", "fas fa-toggle-on fa-2x");
+  darkIcon.setAttribute("id", "toggle__on");
+  darkIcon.setAttribute("onclick", "switchTheme()");
+  div.appendChild(darkIcon);
+  let whiteIcon = document.createElement("i");
+  whiteIcon.setAttribute("class", "fas fa-toggle-off fa-2x");
+  whiteIcon.setAttribute("id", "toggle__off");
+  whiteIcon.setAttribute("onclick", "switchTheme()");
+  whiteIcon.setAttribute("style", "display: none");
+  div.appendChild(whiteIcon);
+}
+
 document.getElementById("toggle__off").style.display = "none";
 let b = localStorage.getItem("theme");
 
@@ -400,11 +427,13 @@ function showReadMoreText() {
 
   for (let i = 0; i < articlesLength.length; i++) {
     let buttonRead = document.getElementById(`${i}`);
-    buttonRead.addEventListener("click", () => {
-      buttonRead.style.display = "none";
-      document.getElementById(`id${i}`).style.display = "block";
-      document.getElementById(`id2${i}`).style.display = "block";
-    });
+    if (buttonRead) {
+      buttonRead.addEventListener("click", () => {
+        buttonRead.style.display = "none";
+        document.getElementById(`id${i}`).style.display = "block";
+        document.getElementById(`id2${i}`).style.display = "block";
+      });
+    }
   }
 }
 showReadMoreText();
@@ -432,51 +461,68 @@ class IndexView {
     }
 
     if (contentUri === "index.html") {
-      createNavbar(navbar);
-      createAddArticleButton();
-      createArticle(article);
-      createModal();
-      showReadMoreText();
-      let myId = uri.slice(9);
-      console.log(myId);
-      let nextBtn = document.getElementsByClassName("footer__link--next")[0];
-      nextBtn.addEventListener("click", () => {
-        window.location.href = `/#article${0}`;
-      });
+      const fetchData = fetch("http://localhost:3001/article")
+        .then((res) => res.json())
+        .then((article) => {
+          createNavbar(navbar);
+          createAddArticleButton();
+          cleanup(containerArticle);
+          createArticle(article);
+          showReadMoreText();
+          createModal();
+          let myId = uri.slice(9);
+          console.log(myId);
+          let nextBtn =
+            document.getElementsByClassName("footer__link--next")[0];
+          nextBtn.addEventListener("click", () => {
+            window.location.href = `/#article${0}`;
+          });
+        });
     } else if (contentUri.startsWith("article")) {
       let myId = uri.slice(7);
-      //console.log(myId);
-      let foundArticle = article.find((item) => item.id == myId);
+      console.log(myId);
+      //let foundArticle = article.find((item) => item.id == myId);
       //  console.log(foundArticle);
-      if (foundArticle) {
-        let articleToRender = [];
-        articleToRender.push(foundArticle);
-        //console.log(articleToRender);
-        createArticle(articleToRender);
-        showReadMoreText();
-      }
-      let previousBtn = document.getElementsByClassName("footer__link")[0];
-      previousBtn.addEventListener("click", () => {
-        if (myId < 1) {
-          console.log(window.location.href);
-          window.location.href = `#index.html`;
-        } else {
-          window.location.href = `/#article${myId - 1}`;
-        }
-      });
+      //if (foundArticle) {
+      //console.log(articleToRender);
 
-      let nextBtn = document.getElementsByClassName("footer__link--next")[0];
-      nextBtn.addEventListener("click", () => {
-        if (myId >= article.length - 1) {
-          window.location.href = `#index.html`;
-        } else {
-          window.location.href = `/#article${parseInt(myId) + 1}`;
-        }
-      });
+      fetch(`http://localhost:3001/article/${myId}`)
+        .then((res) => res.json())
+        .then((article) => {
+          let articleToRender = [];
+          articleToRender.push(article);
+          cleanup(containerArticle);
+          createArticle(articleToRender);
+          showReadMoreText();
+          document.getElementsByClassName(
+            "actions__container"
+          )[0].style.display = "none";
+
+          let previousBtn = document.getElementsByClassName("footer__link")[0];
+          previousBtn.addEventListener("click", () => {
+            if (myId < 1) {
+              console.log(window.location.href);
+              window.location.href = `#index.html`;
+            } else {
+              window.location.href = `/#article${myId - 1}`;
+            }
+          });
+
+          let nextBtn =
+            document.getElementsByClassName("footer__link--next")[0];
+          nextBtn.addEventListener("click", () => {
+            if (myId >= 3) {
+              cleanup(containerArticle);
+              window.location.href = `#index.html`;
+            } else {
+              cleanup(containerArticle);
+              window.location.href = `/#article${parseInt(myId) + 1}`;
+            }
+          });
+        });
     }
     // console.log(elementToRemove);
     function cleanup(parent) {
-      //parent.removeChild(parent.firstChild);
       parent.querySelectorAll("*").forEach((n) => n.remove());
     }
   }
