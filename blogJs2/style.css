@@ -131,7 +131,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  position: relative;
   margin: 35px 0 100px 0;
 }
 
@@ -143,6 +143,11 @@ p {
   line-height: 1.2;
   border: none;
   cursor: pointer;
+}
+
+.footer__link--next {
+  position: absolute;
+  right: 0;
 }
 
 .modal__overlay {
