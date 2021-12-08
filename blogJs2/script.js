@@ -241,6 +241,7 @@ function deleteArticle(id) {
   })
     .then(json)
     .then((data) => {
+      const b = "for second review";
       console.log("delete succes", data);
       window.location.hash = `#index.html`;
     })
