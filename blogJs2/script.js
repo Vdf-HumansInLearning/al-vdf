@@ -161,16 +161,20 @@ function deleteArticle(id) {
   fetch("http://localhost:3001/article/" + id, {
     method: "DELETE",
   })
-    .then(json)
+    .then((res) => {
+      res.json();
+    })
     .then((data) => {
-      const b = "for second review";
+      //  const b = "for second review";
       console.log("delete succes", data);
-      window.location.hash = `#index.html`;
+      fetchData();
     })
     .catch((err) => {
       console.log(err);
     });
 }
+
+//---- save article
 
 //---------footer
 let footer = document.createElement("footer");
@@ -219,6 +223,7 @@ function createModal() {
     input.setAttribute("class", "input");
     input.setAttribute("type", "text");
     input.setAttribute("placeholder", `Please enter ${inputs[i]}`);
+    input.setAttribute("id", `modal-inputs${i}`);
     inputContainer.appendChild(input);
   }
 
@@ -253,6 +258,48 @@ function createModal() {
 function showModal() {
   document.querySelector(".modal__overlay").style.display = "block";
   document.querySelector(".show__modal").style.display = "none";
+  let saveBtn = document.getElementsByClassName("button--pink")[0];
+  console.log(saveBtn);
+  saveBtn.addEventListener("click", () => {
+    saveArticle();
+  });
+  //--save article
+  function saveArticle() {
+    let title = document.getElementById("modal-inputs0").value;
+    let tag = document.getElementById("modal-inputs1").value;
+    let author = document.getElementById("modal-inputs2").value;
+    let date = document.getElementById("modal-inputs3").value;
+    let imgUrl = document.getElementById("modal-inputs4").value;
+    let saying = document.getElementById("modal-inputs5").value;
+    let contentInput = document.getElementsByClassName("textarea")[0].value;
+
+    fetch(`http://localhost:3001/article/4`, {
+      method: "put",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: 4,
+        title: title,
+        subtitle: tag,
+        author: author,
+        date: date,
+        img: imgUrl,
+        imgAlt: imgUrl,
+        content1: contentInput,
+        content2: "",
+        readMore1: saying,
+        readMore2: "",
+      }),
+    })
+      .then(function (data) {
+        console.log("Response", data);
+        hideModal();
+      })
+      .catch(function (error) {
+        console.log("Request failed", error);
+      });
+  }
 }
 
 function hideModal() {
@@ -276,6 +323,10 @@ function createTheme() {
   whiteIcon.setAttribute("onclick", "switchTheme()");
   whiteIcon.setAttribute("style", "display: none");
   div.appendChild(whiteIcon);
+}
+
+function cleanup(parent) {
+  parent.querySelectorAll("*").forEach((n) => n.remove());
 }
 
 document.getElementById("toggle__off").style.display = "none";
@@ -361,6 +412,19 @@ function showReadMoreText() {
 showReadMoreText();
 
 // ------ routes
+let myId = null;
+function fetchData() {
+  fetch("http://localhost:3001/article")
+    .then((res) => res.json())
+    .then((article) => {
+      //cleanup(containerArticle);
+      createNavbar(navbar);
+      createAddArticleButton();
+      createArticle(article);
+      showReadMoreText();
+      createModal();
+    });
+}
 class IndexView {
   constructor() {
     window.addEventListener("hashchange", (e) => this.onRouteChange(e));
@@ -384,23 +448,23 @@ class IndexView {
     }
 
     if (contentUri === "index.html") {
-      const fetchData = fetch("http://localhost:3001/article")
+      fetch("http://localhost:3001/article")
         .then((res) => res.json())
         .then((article) => {
+          console.log(uri + "sssss");
           cleanup(containerArticle);
           createNavbar(navbar);
           createAddArticleButton();
           createArticle(article);
           showReadMoreText();
           createModal();
-
-          nextBtn.addEventListener("click", () => {
-            window.location.href = `/#article${0}`;
-          });
-          previousBtn.style.display = "none";
         });
+      nextBtn.addEventListener("click", () => {
+        window.location.href = `/#article${0}`;
+      });
+      previousBtn.style.display = "none";
     } else if (contentUri.startsWith("article")) {
-      let myId = uri.slice(7);
+      myId = uri.slice(7);
       //console.log(myId);
 
       fetch(`http://localhost:3001/article/${myId}`)
@@ -443,9 +507,6 @@ class IndexView {
         });
     }
     // console.log(elementToRemove);
-    function cleanup(parent) {
-      parent.querySelectorAll("*").forEach((n) => n.remove());
-    }
   }
 }
 new IndexView();
