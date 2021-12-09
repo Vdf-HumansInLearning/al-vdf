@@ -23,6 +23,7 @@ function createNavbar(navbar) {
     a.setAttribute("href", "/");
     a.textContent = navbar[i];
     li.appendChild(a);
+    console.log("navbar created");
   }
 }
 //createNavbar(navbar);
@@ -169,6 +170,8 @@ function deleteArticle(id) {
     .then((data) => {
       //  const b = "for second review";
       console.log("delete succes", data);
+      window.location.hash = "#index.htm";
+      window.location.hash = "#index.html";
       // cleanup();
       fetchData();
     })
@@ -421,7 +424,9 @@ function fetchData() {
     .then((res) => res.json())
     .then((article) => {
       let containerArticle = document.getElementById("main");
+      let cleanupBody = document.getElementById("body");
       cleanup(containerArticle);
+      cleanup(cleanupBody);
       createNavbar(navbar);
       createAddArticleButton();
       createArticle(article);
@@ -445,7 +450,6 @@ class IndexView {
     let containerArticle = document.getElementById("main");
     let nextBtn = document.getElementsByClassName("footer__link--next")[0];
     let previousBtn = document.getElementsByClassName("footer__link")[0];
-    let articlesLength = null;
 
     if (containerArticle) {
       cleanup(containerArticle);
@@ -455,8 +459,11 @@ class IndexView {
       fetch("http://localhost:3001/article")
         .then((res) => res.json())
         .then((articles) => {
+          //  let cleanupBody = document.getElementById("body");
+          //cleanupBody.remove()
+          console.log(containerArticle);
           cleanup(containerArticle);
-          //console.log(articles);
+          // cleanup(cleanupBody);
           localStorage.setItem("articlesLength", articles.length);
           createNavbar(navbar);
           createAddArticleButton();
@@ -515,4 +522,11 @@ class IndexView {
     // console.log(elementToRemove);
   }
 }
-new IndexView();
+//new IndexView();
+
+document.addEventListener("DOMContentLoaded", () => {
+  let myRouter = new IndexView();
+  const initialHash = window.location.hash;
+  window.location.hash = "#aa";
+  window.location.hash = initialHash;
+});
