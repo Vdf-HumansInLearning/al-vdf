@@ -442,10 +442,10 @@ class IndexView {
 
   loadContent(uri) {
     const contentUri = `${uri}`;
-
     let containerArticle = document.getElementById("main");
     let nextBtn = document.getElementsByClassName("footer__link--next")[0];
     let previousBtn = document.getElementsByClassName("footer__link")[0];
+    let articlesLength = null;
 
     if (containerArticle) {
       cleanup(containerArticle);
@@ -454,11 +454,13 @@ class IndexView {
     if (contentUri === "index.html") {
       fetch("http://localhost:3001/article")
         .then((res) => res.json())
-        .then((article) => {
+        .then((articles) => {
           cleanup(containerArticle);
+          //console.log(articles);
+          localStorage.setItem("articlesLength", articles.length);
           createNavbar(navbar);
           createAddArticleButton();
-          createArticle(article);
+          createArticle(articles);
           showReadMoreText();
           createModal();
         });
@@ -468,11 +470,13 @@ class IndexView {
       previousBtn.style.display = "none";
     } else if (contentUri.startsWith("article")) {
       myId = uri.slice(7);
-      //console.log(myId);
 
       fetch(`http://localhost:3001/article/${myId}`)
         .then((res) => res.json())
         .then((article) => {
+          console.log(myId);
+          let articlesLength = localStorage.getItem("articlesLength");
+
           let articleToRender = [];
           articleToRender.push(article);
           cleanup(containerArticle);
@@ -485,17 +489,16 @@ class IndexView {
           previousBtn.style.display = "block";
           previousBtn.addEventListener("click", () => {
             if (myId < 1) {
-              console.log(window.location.href);
               window.location.href = `#index.html`;
             } else {
               window.location.href = `/#article${myId - 1}`;
             }
           });
 
-          if (myId > 2) {
-            nextBtn.style.display = "none";
-          } else {
+          if (myId < articlesLength - 1) {
             nextBtn.style.display = "block";
+          } else {
+            nextBtn.style.display = "none";
           }
 
           nextBtn.addEventListener("click", () => {
