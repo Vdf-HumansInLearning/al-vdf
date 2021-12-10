@@ -1,10 +1,16 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 const router = express.Router();
 
 router.post("/login", function (req, res, next) {
   console.log(req.body);
-  let users = JSON.parse(fs.readFileSync("./users.json", "utf8"));
+
+  //validation
+
+  let users = JSON.parse(
+    fs.readFileSync(path.resolve(__dirname, "../users.json"), "utf8")
+  );
   let user = users.find(
     (user) =>
       user.email === req.body.email && user.password === req.body.password
@@ -15,6 +21,9 @@ router.post("/login", function (req, res, next) {
 
 router.post("/register", function (req, res) {
   console.log(req.body);
+  let users = JSON.parse(
+    fs.readFileSync(path.resolve(__dirname, "../users.json"), "utf8")
+  );
   users.push({
     id: users[users.length - 1].id + 1,
     name: "",
@@ -42,13 +51,17 @@ router.post("/register", function (req, res) {
     },
   });
 
-  fs.writeFile("./users.json", JSON.stringify(users), function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Operation complete.");
+  fs.writeFile(
+    path.resolve(__dirname, "../users.json"),
+    JSON.stringify(users),
+    function (err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Operation complete.");
+      }
     }
-  });
+  );
   res.send("Successfully registered");
 });
 
