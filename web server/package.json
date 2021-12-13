@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
-    "json:server": "json-server --watch db.json"
+    "start": "nodemon app.js"
   },
   "dependencies": {
     "axios": "^0.24.0",
