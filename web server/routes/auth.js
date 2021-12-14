@@ -2,12 +2,11 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+const session = require("express-session");
 const router = express.Router();
 
 router.post("/login", function (req, res, next) {
   console.log(req.body);
-
-  //validation
 
   let users = JSON.parse(
     fs.readFileSync(path.resolve(__dirname, "../users.json"), "utf8")
@@ -19,10 +18,14 @@ router.post("/login", function (req, res, next) {
   console.log(userFound);
   if (userFound) {
     console.log(req.body.email);
-    res.cookie("user", `${req.body.email}`);
+    res.cookie("user", `${req.body.email}`); //,{ httpOnly: true });
     res.cookie("password", `${req.body.password}`);
+    console.log(req.cookies);
     // res.send(JSON.stringify(req.cookies));
     // console.log(res.cookie);
+
+    //res.send(JSON.stringify(req.cookies));
+
     res.status(220).json(userFound);
   } else {
     res.status(404).send("User not found");
@@ -32,6 +35,7 @@ router.post("/login", function (req, res, next) {
 router.get("/login", (req, res) => {
   // res.cookie("user", req.body.email);
   // res.cookie("password", req.body.password);
+  //req.session.email = req.body.email;
   res.send(JSON.stringify(req.cookies));
 });
 
