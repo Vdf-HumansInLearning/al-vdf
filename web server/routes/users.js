@@ -22,7 +22,7 @@ router.get("/:id", function (req, res, next) {
   }
   res.status(200).json(filteredUser);
 
-  console.log(filteredUser);
+  //console.log(filteredUser);
 });
 
 module.exports = router;
